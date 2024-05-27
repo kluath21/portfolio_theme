@@ -1,0 +1,79 @@
+/* footer.css */
+
+.footer-container {
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer-social {
+    margin-bottom: 1rem;
+}
+
+.footer-social a {
+    margin: 0 1rem;
+    color: var(--text-color);
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+.footer-nav li a {
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.footer-nav li a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.footer-nav li a:hover::before {
+    opacity: 1;
+}
+
+.footer-container a:hover {
+    color: var(--text-color);
+}
+
+.footer-container a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+.footer-container a:focus-visible {
+    outline: auto;
+}
+
+.footer-copyright {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}

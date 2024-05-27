@@ -1,0 +1,25 @@
+/*
+Theme Name: Portfolio Theme
+Theme URI: https://example.com/portfolio_theme
+Author: Votre Nom
+Author URI: https://example.com
+Description: Un thème WordPress pour portfolio
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: portfolio_theme
+*/
+
+@import url('assets/css/header.css');
+@import url('assets/css/footer.css');
+
+
+main {
+  position: relative;
+  top: 50px;
+  left: 25px;
+  right: 25px;
+  max-width: 1100px;
+  width: 95%;
+  height: 1000px;
+}
