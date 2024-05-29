@@ -27,6 +27,7 @@ if (!defined('ABSPATH')) {
             banonp &copy; <?php echo date('Y'); ?>
         </div>
     </div>
+    <?php get_template_part( 'template/modal' ); ?>
     <?php wp_footer(); ?>
 </footer>
 </body>

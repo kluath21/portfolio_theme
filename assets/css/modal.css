@@ -1,0 +1,149 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    /* Fond noir transparent à 80% */
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay.open {
+    opacity: 1;
+    visibility: visible;
+    animation: fade-in-move-down 2s 300ms both;
+  }
+  .popup {  
+    background: #ffffff;
+    border: 5px solid #000000;
+    border-radius: 5px;
+    transition: all 2s ease-in-out;
+    position: absolute;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 800px;
+    min-height: 570px;
+  }
+  
+  .popup__header {
+    width: 72%;
+    height: auto;
+    /* margin-right: 62px; */
+    /* margin-top: 10px; */
+  }
+  
+  /* .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  } */
+  
+  .entry-content {
+    margin-top: 45px;
+    font-family: "Poppins";
+  }
+  
+  /* Animations ouverture et fermeture */
+  div.animate-zoom-in {
+    animation: animatezoomin 0.6s;
+  }
+  
+  @keyframes animatezoomin {
+    from {
+      transform: scale(0);
+    }
+  
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  .animate-zoom-out {
+    animation: animatezoomout 0.6s;
+  }
+  
+  @keyframes animatezoomout {
+    from {
+      transform: scale(1);
+    }
+  
+    to {
+      transform: scale(0);
+    }
+  }
+  
+  /* Formulaire */
+  #wwpcf7-f41-o1 .wpcf7-form {
+    width: 263px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .wpcf7-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #wpcf7-f41-o1 .wpcf7-form .wpcf7-text {
+    width: 263px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid #B8BBC2;
+  }
+  
+  textarea.wpcf7-form-control.wpcf7-textarea {
+    width: 263px;
+    height: 210px;
+    border-radius: 8px;
+    border: 1px solid #B8BBC2;
+    margin-bottom: 10px;
+  }
+  
+  #wpcf7-f41-o1 .wpcf7-form .wpcf7-submit:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.0196078431);
+    font-weight: 700;
+  }
+  
+  label {
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  
+  input[type="submit" i] {
+    display: flex;
+    font-family: "Space Mono";
+    appearance: auto;
+    user-select: none;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: buttonface;
+    color: buttontext;
+    white-space: pre;
+    padding-block: 15px;
+    padding-inline: 109px;
+    transition: all 500ms ease-out;
+  }
+  
+  input[type="submit" i].clicked {
+    transform: scale(0.95);
+  }

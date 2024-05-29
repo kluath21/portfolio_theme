@@ -2,28 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
+    padding: 0;
     margin: 0;
-    /* padding: 0; */
-    /* box-sizing: border-box; */
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     transition: all 0.4s ease;
 }
 
 /* Colours */
 :root {
-    --body-color: #E4E9F7;
-    --nav-color: #4070F4;
+    --body-color: #F7F9FC;
+    --nav-color: #283E4A ;
     --side-nav: #010718;
     --text-color: #FFF;
     --search-bar: #F2F2F2;
     --search-text: #010718;
+    --heading-color: #1A5276; /* Couleur des titres */
 }
 
 body {
     height: 100%;
     background-color: var(--body-color);
 }
-
+h1 h2 h3{
+    color: var(--heading-color);
+}
 body.dark {
     --body-color: #18191A;
     --nav-color: #242526;

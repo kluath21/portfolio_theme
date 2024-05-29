@@ -12,9 +12,10 @@ Text Domain: portfolio_theme
 
 @import url('assets/css/header.css');
 @import url('assets/css/footer.css');
+@import url('assets/css/modal.css');
 
 
-main {
+/* main {
   position: relative;
   top: 50px;
   left: 25px;
@@ -22,4 +23,99 @@ main {
   max-width: 1100px;
   width: 95%;
   height: 1000px;
+} */
+/* Styles pour centrer le contenu */
+.center-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh; /* Occupe toute la hauteur de la fenêtre */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about__image {
+  width: 100%;
+  height: auto;
+  max-width: 400px; /* Limite la largeur de l'image */
+  margin: 20px auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.about__name {
+  color: var(--heading-color); /* Couleur du texte */
+  font-weight: bold;
+}
+
+.about__desc {
+  color: #555; /* Couleur du texte */
+  line-height: 1.6;
+  text-align: justify;
+}
+
+@media (max-width: 790px) {
+.about__desc {
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+  font-size: 14px;
+}
+.center-section {
+  height: 110vh; /* Occupe toute la hauteur de la fenêtre */
+}
+}
+
+/* Styles pour centrer le contenu */
+.bio-center-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh; /* Occupe toute la hauteur de la fenêtre */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.bio-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bio__name {
+  color: var(--heading-color); /* Couleur du texte */
+  font-weight: bold;
+  line-height: 3;
+}
+
+.bio__desc {
+  color: #555; /* Couleur du texte */
+  line-height: 1.6;
+  text-align: justify;
+}
+
+@media (max-width: 790px) {
+  .bio__desc {
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 14px;
+  }
+  .bio-center-section {
+    height: 50vh; /* Occupe toute la hauteur de la fenêtre */
+  }
 }
