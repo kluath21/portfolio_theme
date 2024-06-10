@@ -1,0 +1,88 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h2, h3 {
+  color: #333;
+  text-align: left;
+}
+
+/* Formation Section */
+.section.formation,
+.section.certificat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+  padding: 20px;
+  background: #eaeaea;
+  border-radius: 8px;
+}
+
+.formation_description,
+.certificat__grid {
+  max-width: 1100px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formation_description ul, .formation_description ol,
+.certificat__grid ul, .certificat__grid ol {
+  margin-left: 20px;
+}
+
+.formation_description ul li, .formation_description ol li,
+.certificat__grid ul li, .certificat__grid ol li {
+  margin-bottom: 10px;
+}
+
+/* Link to PDF */
+.formation_description p a,
+.certificat__grid p a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.formation_description p a:hover,
+.certificat__grid p a:hover {
+  text-decoration: underline;
+}
+
+/* Certificat Section Grid */
+.certificat__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.certificat__item {
+  flex: 1 1 calc(33.333% - 20px);
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificat__item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
