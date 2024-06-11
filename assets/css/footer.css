@@ -14,11 +14,16 @@
 
 .footer-social a {
     margin: 0 1rem;
-    color: var(--text-color);
+    color: #fff;
     font-size: 2.5rem;
     text-decoration: none;
 }
-
+.footer-social a::before {
+    margin: 0 1rem;
+    color: #fff;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
 .footer-links {
     margin-bottom: 1rem;
 }
@@ -38,7 +43,7 @@
     position: relative;
     font-size: 17px;
     font-weight: 400;
-    color: var(--text-color);
+    color: #fff;
     text-decoration: none;
     padding: 10px;
 }
@@ -52,7 +57,7 @@
     height: 6px;
     width: 6px;
     border-radius: 50%;
-    background-color: var(--text-color);
+    background-color: #fff;
     opacity: 0;
     transition: all 0.3s ease;
 }
@@ -62,7 +67,7 @@
 }
 
 .footer-container a:hover {
-    color: var(--text-color);
+    color: beige;
 }
 
 .footer-container a:focus {
@@ -76,5 +81,5 @@
 
 .footer-copyright {
     font-size: 1.4rem;
-    color: var(--text-color);
+    color: #fff;
 }

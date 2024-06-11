@@ -1,5 +1,5 @@
-    <?php get_header(); ?>
-    <main>
+<?php get_header(); ?>
+<main>
 <!-- About -->
 <section id="about-section" class="center-section">
     <div class="about-container">
@@ -19,6 +19,70 @@
         </p>
     </div>
 </section>
+
+<!-- Projets -->
+<section id="projects-section" class="projects-center-section">
+    <div class="projects-container">
+        <h1>Mes Projets</h1>
+        <div class="projects-grid">
+            <?php
+            // Query to fetch two latest projects
+            $args = array(
+                'post_type' => 'photo',
+                'posts_per_page' => 2
+            );
+            $query = new WP_Query($args);
+
+            if ($query->have_posts()) :
+                while ($query->have_posts()) : $query->the_post(); ?>
+                    <div class="single_projet">
+                        <?php 
+                        // Récupérer l'ID de l'image depuis les métadonnées du post
+                        $image_id = get_post_meta(get_the_ID(), 'image', true);
+                        $image_url = wp_get_attachment_image_url($image_id, 'desktop-home');
+                        if ($image_id) {
+                            echo '<a href="' . get_permalink() . '"><img src="' . esc_url($image_url) . '" class="photo-image"></a>';
+                        }
+                        ?>
+                        <hr class="separation-line">
+                        <h2><?php the_title(); ?></h2>
+                        <div class='single_description_date'>
+                            <p><?php echo get_the_date(); ?></p>
+                        </div>
+                        <div class="projet_description">
+                            <div class="single_categorie_photo">
+                                <h3>Langages : </h3>
+                                <?php
+                                $terms = get_the_terms(get_the_ID(), 'categorie-photo');
+                                if ($terms && !is_wp_error($terms)) {
+                                    foreach ($terms as $term) {
+                                        echo '<span>' . esc_html($term->name) . '</span> ';
+                                    }
+                                }
+                                ?>
+                            </div>
+                            <div class="single_description_categorie">
+                                <h3>Lien vers le projet : </h3>
+                                <?php
+                                $github_link = get_post_meta(get_the_ID(), '_github_link', true);
+                                if ($github_link) {
+                                    echo '<a href="' . esc_url($github_link) . '" target="_blank">' . esc_html($github_link) . '</a>';
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile;
+                wp_reset_postdata();
+            endif; ?>
+        </div>
+        <div class="projects-cta">
+            <a href="<?php echo get_permalink(get_page_by_path('projets')); ?>" class="cta-button">Voir tous les projets</a>
+        </div>
+    </div>
+</section>
+
+<!-- Bio -->
 <section id="bio-section" class="bio-center-section">
     <div class="bio-container">
         <h1>A propos de <span class="bio__name">moi</span></h1>
@@ -31,6 +95,7 @@
         </p>
     </div>
 </section>
-    </main>  
-    <?php get_footer(); ?>
-    <?php wp_footer(); ?>
+</main>
+<?php get_footer(); ?>
+<?php wp_footer(); ?>
+

@@ -4,11 +4,62 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: var(--body-color);
 }
 
-h1, h2 {
-    color: #333;
+/* Variables CSS */
+:root {
+    --body-color: #f4f4f4;
+    --nav-color: #283E4A;
+    --side-nav: #010718;
+    --text-color: #333;
+    --search-bar: #F2F2F2;
+    --search-text: #010718;
+    --heading-color: #1A5276;
+}
+
+body.dark {
+    --body-color: #18191A;
+    --nav-color: #242526;
+    --side-nav: #242526;
+    --text-color: #CCC;
+    --search-bar: #242526;
+    --search-text: #FFF;
+    --heading-color: #E4E6EB;
+}
+
+h1, h2, h3 {
+    color: var(--heading-color);
+}
+
+/* Ensure Dark Mode applies to content areas */
+body.dark .section {
+    background-color: var(--nav-color);
+    color: var(--text-color);
+}
+
+body.dark h1, body.dark h2, body.dark h3 {
+    color: var(--heading-color);
+}
+
+body.dark p, body.dark li, body.dark a {
+    color: var(--text-color);
+}
+
+.section_single_projet, .section_projets, .projects-center-section, .section_competence {
+    background-color: var(--body-color);
+}
+
+body.dark .section_single_projet, body.dark .section_projets, body.dark .projects-center-section, body.dark .section_competence {
+    background-color: var(--nav-color);
+}
+
+body.dark .single_projet_container {
+    background: var(--nav-color);
+}
+
+.projet_description, .single_description_date, .single_categorie_photo, .single_description_lien, .single_description_objectif, .single_description_tache {
+    color: var(--text-color);
 }
 
 /* Projets Section */
@@ -23,6 +74,10 @@ h1, h2 {
     border-radius: 8px;
 }
 
+body.dark .section_projets {
+    background: var(--nav-color);
+}
+
 .projets_container {
     display: flex;
     flex-wrap: wrap;
@@ -33,6 +88,15 @@ h1, h2 {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     justify-content: space-between;
+}
+hr.separation-line {
+    border: 0;
+    border-top: 1px solid #ccc;
+    width: 70%; /* Définir la largeur à 50% */
+    margin: 20px auto; /* Centrer la ligne */
+}
+body.dark .projets_container {
+    background: var(--side-nav);
 }
 
 .single_projet {
@@ -47,9 +111,21 @@ h1, h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+body.dark .single_projet {
+    background: var(--nav-color);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
 .single_projet:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .single_projet:hover {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+img.photo-image {
+    width: 73%;
 }
 
 .photo-image {

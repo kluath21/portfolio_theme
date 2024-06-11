@@ -22,6 +22,21 @@ h2, h3 {
 }
 
 /* Formation Section */
+.formation_description {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formation_description:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+body.dark .formation_description {
+  background: var(--nav-color);
+}
+.formation_description:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
 .section.formation,
 .section.certificat {
   display: flex;
@@ -38,6 +53,7 @@ h2, h3 {
 .certificat__grid {
   max-width: 1100px;
   background: #fff;
+  margin-top: 15px;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -62,7 +78,7 @@ h2, h3 {
 
 .formation_description p a:hover,
 .certificat__grid p a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Certificat Section Grid */
@@ -73,12 +89,16 @@ h2, h3 {
 }
 
 .certificat__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
   flex: 1 1 calc(33.333% - 20px);
   background: #fff;
-  padding: 10px;
+  padding: 25px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

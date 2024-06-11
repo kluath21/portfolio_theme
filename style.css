@@ -21,15 +21,7 @@ body.page-template .page-template-projet .page-template-projet-php .page .page-i
 .admin-bar  .customize-support {
   margin-top: 80px;
 }
-/* main {
-  position: relative;
-  top: 50px;
-  left: 25px;
-  right: 25px;
-  max-width: 1100px;
-  width: 95%;
-  height: 1000px;
-} */
+
 /* Styles pour centrer le contenu */
 .center-section {
   display: flex;
@@ -44,10 +36,25 @@ body.page-template .page-template-projet .page-template-projet-php .page .page-i
 .about-container {
   max-width: 1100px;
   margin: 0 auto;
-  background-color: #f9f9f9;
+  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+body.dark .about-container {
+  background: var(--nav-color);
+}
+.about-container:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+body.dark .about-container {
+  background-color: var(--nav-color);
 }
 
 .about__image {
@@ -65,13 +72,14 @@ body.page-template .page-template-projet .page-template-projet-php .page .page-i
 }
 
 .about__desc {
-  color: #555; /* Couleur du texte */
+  color: var(--text-color); /* Couleur du texte */
   line-height: 1.6;
   text-align: justify;
 }
-/* style single*/
 
- img.photo-image {
+/* style single */
+
+img.photo-image {
   width: 25%;
   height: 400px;
   margin: 20px auto;
@@ -80,16 +88,224 @@ body.page-template .page-template-projet .page-template-projet-php .page .page-i
   overflow: hidden;
 }
 
-@media (max-width: 790px) {
-.about__desc {
-  color: #555;
+/* section projet de la page d'accueil */
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
   line-height: 1.6;
-  text-align: justify;
-  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--body-color);
 }
-.center-section {
-  height: 110vh; /* Occupe toute la hauteur de la fenêtre */
+
+body.dark {
+  background-color: var(--body-color);
 }
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--body-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+body.dark .container {
+  background: var(--nav-color);
+}
+
+h2, h3 {
+  color: var(--heading-color);
+  text-align: left;
+}
+
+body.dark h2, body.dark h3 {
+  color: var(--heading-color);
+}
+
+/* Formation Section */
+.section.formation,
+.section.certificat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+  padding: 20px;
+  background: var(--body-color);
+  border-radius: 8px;
+}
+
+body.dark .section.formation,
+body.dark .section.certificat {
+  background: var(--nav-color);
+}
+
+.formation_description,
+.certificat__grid {
+  max-width: 1100px;
+  background: var(--body-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .formation_description,
+body.dark .certificat__grid {
+  background: var(--nav-color);
+}
+
+.formation_description ul, .formation_description ol,
+.certificat__grid ul, .certificat__grid ol {
+  margin-left: 20px;
+}
+
+.formation_description ul li, .formation_description ol li,
+.certificat__grid ul li, .certificat__grid ol li {
+  margin-bottom: 10px;
+}
+
+/* Link to PDF */
+.formation_description p a,
+.certificat__grid p a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.formation_description p a:hover,
+.certificat__grid p a:hover {
+  text-decoration: underline;
+}
+
+/* Certificat Section Grid */
+.certificat__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.certificat__item {
+  flex: 1 1 calc(33.333% - 20px);
+  background: var(--body-color);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark .certificat__item {
+  background: var(--nav-color);
+}
+
+.certificat__item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .certificat__item:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Projets Section */
+#projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background: var(--body-color);
+  border-radius: 8px;
+}
+
+body.dark #projects-section {
+  background: var(--nav-color);
+}
+
+.projects-container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.single_projet {
+  flex: 1 1 calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+  background: var(--body-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark .single_projet {
+  background: var(--nav-color);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.single_projet:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .single_projet:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.photo-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.projet_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.single_description_date {
+  margin-bottom: 20px;
+}
+
+.single_categorie_photo,
+.single_description_categorie {
+  margin-bottom: 20px;
+}
+
+.projects-cta {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--nav-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #005bb5;
+}
+
+/* Alignments */
+.projet_description h3,
+.single_description_date p {
+  margin: 0;
 }
 
 /* Styles pour centrer le contenu */
@@ -97,7 +313,7 @@ body.page-template .page-template-projet .page-template-projet-php .page .page-i
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 25vh; /* Occupe toute la hauteur de la fenêtre */
+  height: 30vh; /* Occupe toute la hauteur de la fenêtre */
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
@@ -106,10 +322,22 @@ body.page-template .page-template-projet .page-template-projet-php .page .page-i
 .bio-container {
   max-width: 1100px;
   margin: 0 auto;
-  background-color: #f9f9f9;
+  background-color: var(--body-color);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bio-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+body.dark .bio-container {
+  background: var(--nav-color);
+}
+.bio-container:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
 
 .bio__name {
@@ -118,17 +346,23 @@ body.page-template .page-template-projet .page-template-projet-php .page .page-i
   line-height: 3;
 }
 
+body.dark .bio__name {
+  color: var(--heading-color);
+}
+
 .bio__desc {
-  color: #555; /* Couleur du texte */
+  color: var(--text-color); /* Couleur du texte */
   line-height: 1.6;
   text-align: justify;
 }
+
 .entry-title {
   max-width: 1000px;
- margin-top: 60px;
- margin-left: auto;
+  margin-top: 60px;
+  margin-left: auto;
   margin-right: auto;
 }
+
 .entry-content {
   max-width: 1000px;
   margin-top: 15px;
@@ -136,6 +370,11 @@ body.page-template .page-template-projet .page-template-projet-php .page .page-i
   margin-right: auto;
   font-family: "Poppins";  
 }
+
+body.dark .entry-content {
+  color: var(--text-color);
+}
+
 .projet {
   max-width: 1000px;
   height: 1000px;
@@ -145,24 +384,20 @@ body.page-template .page-template-projet .page-template-projet-php .page .page-i
   font-family: "Poppins";  
 }
 
-
-/* */
-
- img.photo-image {
-  width: 25%;
-  height: 400px;
-  margin: 20px auto;
-  display: block;
-  border-radius: 8px;
-  overflow: hidden;
+body.dark .projet {
+  color: var(--text-color);
 }
 
+/* Responsive styles */
 @media (max-width: 790px) {
   .bio__desc {
-    color: #555;
+    color: var(--text-color);
     line-height: 1.6;
     text-align: justify;
     font-size: 14px;
+  }
+  .center-section {
+    height: 110vh; /* Occupe toute la hauteur de la fenêtre */
   }
   .bio-center-section {
     height: 50vh; /* Occupe toute la hauteur de la fenêtre */

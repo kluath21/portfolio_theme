@@ -1,6 +1,6 @@
-// custom-script.js
 document.addEventListener('DOMContentLoaded', function () {
     const body = document.querySelector("body"),
+          main = document.querySelector("main"),
           nav = document.querySelector("nav"),
           modeToggle = document.querySelector(".dark-light"),
           searchToggle = document.querySelector(".searchToggle"),
@@ -37,8 +37,9 @@ document.addEventListener('DOMContentLoaded', function () {
     body.addEventListener("click", e => {
         let clickedElm = e.target;
 
-        if (!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")) {
+        if (!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu") && !clickedElm.closest('.menu')) {
             nav.classList.remove("active");
         }
     });
 });
+

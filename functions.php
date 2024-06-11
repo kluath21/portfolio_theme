@@ -58,3 +58,61 @@ function register_my_menus() {
 }
 add_action('init', 'register_my_menus');
 ?>
+
+<?php
+function create_custom_post_type() {
+    register_post_type('photo',
+        array(
+            'labels'      => array(
+                'name'          => __('Photos'),
+                'singular_name' => __('Photo'),
+            ),
+            'public'      => true,
+            'has_archive' => true,
+            'supports'    => array('title', 'editor', 'thumbnail'),
+            'show_in_rest' => true, // Activer l'éditeur de blocs si nécessaire
+        )
+    );
+}
+add_action('init', 'create_custom_post_type');
+
+
+
+function add_github_link_metabox() {
+    add_meta_box(
+        'github_link',
+        'Lien du repo Github',
+        'display_github_link_metabox',
+        'photos', // Le type de post auquel la metabox sera ajoutée
+        'normal',
+        'high'
+    );
+}
+add_action('add_meta_boxes', 'add_github_link_metabox');
+
+function display_github_link_metabox($post) {
+    // Utilisez nonce pour la sécurité
+    wp_nonce_field(basename(__FILE__), 'github_link_nonce');
+    $github_link = get_post_meta($post->ID(), '_github_link', true);
+    ?>
+    <p>
+        <label for="github_link">URL du repo Github :</label>
+        <input type="text" name="github_link" id="github_link" value="<?php echo esc_attr($github_link); ?>" size="30" />
+    </p>
+    <?php
+}
+
+function save_github_link_metabox($post_id) {
+    // Vérifiez le nonce pour la sécurité
+    if (!isset($_POST['github_link_nonce']) || !wp_verify_nonce($_POST['github_link_nonce'], basename(__FILE__))) {
+        return $post_id;
+    }
+    // Vérifiez les permissions de l'utilisateur
+    if (!current_user_can('edit_post', $post_id)) {
+        return $post_id;
+    }
+    // Enregistrez ou supprimez le lien Github
+    $new_github_link = (isset($_POST['github_link']) ? sanitize_text_field($_POST['github_link']) : '');
+    update_post_meta($post_id, '_github_link', $new_github_link);
+}
+add_action('save_post', 'save_github_link_metabox');
