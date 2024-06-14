@@ -8,10 +8,10 @@ if (!defined('ABSPATH')) {
 <footer>
     <div class="footer-container">
         <div class="footer-social">
-            <a href="#"><i class='bx bxl-linkedin'></i></a>
-            <a href="#"><i class='bx bxl-discord'></i></a>
-            <a href="#"><i class='bx bxl-twitter'></i></a>
-            <a href="#"><i class='bx bxl-github'></i></a>
+            <a href="https://www.linkedin.com/in/patrice-b-105698313" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://discord.com/invite/xwXZ5Jkm" target="_blank"><i class='bx bxl-discord'></i></a>
+            <a href="https://x.com/@klathu2021" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://github.com/kluath21" target="_blank"><i class='bx bxl-github'></i></a>
         </div>
         <div class="footer-links">
             <?php
@@ -32,3 +32,4 @@ if (!defined('ABSPATH')) {
 </footer>
 </body>
 </html>
+

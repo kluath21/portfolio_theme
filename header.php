@@ -50,8 +50,9 @@
                    </div>
 
                     <div class="search-field">
-                        <input type="text" placeholder="Search...">
-                        <i class='bx bx-search'></i>
+                        <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+                            <input type="search" name="s" placeholder="Search..." value="<?php echo get_search_query(); ?>">
+                        </form>
                     </div>
                 </div>
             </div>
@@ -62,5 +63,3 @@
     <div class="logo-toggle">
         <i class='bx bx-x siderbarClose'></i>
     </div>
-
-

@@ -26,6 +26,8 @@ body.dark {
     --search-bar: #242526;
     --search-text: #FFF;
     --heading-color: #E4E6EB;
+    --button-background: #333; 
+    --button-hover: #003f7f; 
 }
 
 h1, h2, h3 {
@@ -85,6 +87,7 @@ body.dark .section_projets {
     max-width: 1100px;
     background: #fff;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     justify-content: space-between;
@@ -113,7 +116,7 @@ body.dark .projets_container {
 
 body.dark .single_projet {
     background: var(--nav-color);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px #fff;
 }
 
 .single_projet:hover {
@@ -138,22 +141,52 @@ img.photo-image {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
+    gap: 0px;
 }
 
 .single_description_date {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .single_categorie_photo,
 .single_description_categorie,
 .single_description_objectif,
 .single_description_tache {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /* Alignments */
 .projet_description h2,
 .single_description_date p {
     margin: 0;
+}
+
+.projet_cta {
+    display: flex;
+    justify-content: center;
+    margin-bottom: auto; 
+    margin-top: 20px;
+}
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--heading-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background: #005bb5; 
+}
+
+body.dark .cta-button {
+    background: var(--button-background);
+    box-shadow: 0 0 10px #fff;
+}
+
+body.dark .cta-button:hover {
+    background: var(--button-hover);
 }

@@ -23,7 +23,7 @@
 <!-- Projets -->
 <section id="projects-section" class="projects-center-section">
     <div class="projects-container">
-        <h1>Mes Projets</h1>
+        <h1 class="projet_accueil">Mes Projets</h1>
         <div class="projects-grid">
             <?php
             // Query to fetch two latest projects
@@ -61,15 +61,17 @@
                                 }
                                 ?>
                             </div>
-                            <div class="single_description_categorie">
-                                <h3>Lien vers le projet : </h3>
-                                <?php
-                                $github_link = get_post_meta(get_the_ID(), '_github_link', true);
-                                if ($github_link) {
-                                    echo '<a href="' . esc_url($github_link) . '" target="_blank">' . esc_html($github_link) . '</a>';
-                                }
-                                ?>
-                            </div>
+                            <div class="single_description_github link">
+                            <h2>Lien vers le repo de Github :</h2>
+                            <?php
+                            $github_link = get_field('github_link');
+                            if ($github_link) {
+                                echo '<a href="' . esc_url($github_link) . '" target="_blank">' . esc_html($github_link) . '</a>';
+                            } else {
+                                echo '<p>Aucun lien GitHub disponible</p>';
+                            }
+                            ?>
+                        </div>
                         </div>
                     </div>
                 <?php endwhile;

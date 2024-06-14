@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
     const body = document.querySelector("body"),
-          main = document.querySelector("main"),
           nav = document.querySelector("nav"),
           modeToggle = document.querySelector(".dark-light"),
           searchToggle = document.querySelector(".searchToggle"),
@@ -42,4 +41,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
