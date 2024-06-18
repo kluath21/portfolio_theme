@@ -47,16 +47,10 @@ strong {
   display: flex;
   flex-direction: column;
 }
-
-.formation_card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
 body.dark .formation_card {
   background: var(--nav-color);
   color: var(--text-color);
-  box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 10px #000;
 }
 
 .formation_card p strong {
@@ -115,11 +109,13 @@ body.dark .formation_card {
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: dodgerblue;
 }
 
 .certificat__item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);  
 }
 
 .certificat__item {
@@ -136,7 +132,7 @@ body.dark .formation_card {
 body.dark .certificat__item {
   background: var(--nav-color);
   color: var(--text-color);
-  box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 10px #000;
 }
 
 .cta-button {
@@ -158,12 +154,13 @@ body.dark .certificat__item {
 
 body.dark .cta-button {
   background: #0073e6;
-  box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 10px #000;
 }
 
 body.dark .cta-button:hover {
   background: #005bb5;
 }
+
 /* Responsive styles */
 @media (max-width: 790px) {
   .formation_title {
@@ -178,7 +175,7 @@ body.dark .cta-button:hover {
     padding-bottom: 15px;
   }
   .section.formation, .section.certificat {
-    margin-top: 0;
+    margin-top: 36px;
   }
   .certificat__item.default:nth-child(n+9) {
     display: none;

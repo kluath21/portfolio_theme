@@ -5,7 +5,7 @@ Template Name: Projets
 get_header(); ?>
 
 <?php
-// Query to fetch projects
+// Query pour récupérer tous les projets
 $args = array(
     'post_type' => 'photo',
     'posts_per_page' => -1
@@ -27,14 +27,17 @@ if ($query->have_posts()) : ?>
                     }
                     ?>
                     <hr class="separation-line">
+                    <!-- Récupérer le titre du projet -->
                     <h1><?php the_title(); ?></h1>
                     <div class='single_description_date'>
-                        <p><?php echo get_the_date(); ?></p> <!-- Afficher la date de publication -->
+                        <!-- Afficher la date de publication -->
+                        <p><?php echo get_the_date(); ?></p> 
                     </div>
                     <div class="projet_description">
                         <div class="single_categorie_photo">
                             <h2>Langages : </h2>
                             <?php
+                            // Afficher les catégories de langages
                             $terms = get_the_terms(get_the_ID(), 'categorie-photo');
                             if ($terms && !is_wp_error($terms)) {
                                 foreach ($terms as $term) {
@@ -43,9 +46,10 @@ if ($query->have_posts()) : ?>
                             }
                             ?>
                         </div>
-                        <div class="single_description_github link">
+                        <!-- <div class="single_description_github link">
                             <h2>Lien vers le repo de Github :</h2>
                             <?php
+                            // Afficher le lien GitHub
                             $github_link = get_field('github_link');
                             if ($github_link) {
                                 echo '<a href="' . esc_url($github_link) . '" target="_blank">' . esc_html($github_link) . '</a>';
@@ -53,9 +57,10 @@ if ($query->have_posts()) : ?>
                                 echo '<p>Aucun lien GitHub disponible</p>';
                             }
                             ?>
-                        </div>
+                        </div> -->
                         <div class="single_description_objectif">
                             <h2>Objectif : </h2>
+                             <!-- Récupérer le contenu de l'objectif -->
                             <?php the_field('objectif'); ?>
                         </div>
                         <div class="projet_cta">

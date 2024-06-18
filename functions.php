@@ -30,6 +30,7 @@ function enqueue_custom_styles_and_scripts() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles_and_scripts');
 
+// Fonction pour enregistrer les menus
 function register_my_menus() {
     register_nav_menus(
         array(

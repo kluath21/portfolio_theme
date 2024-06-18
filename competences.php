@@ -93,78 +93,78 @@ get_header(); ?>
 <section class="section certificat">
     <h2 class="certificat_title">Certificat de Réussite des cours</h2>    
     <div class="certificat__grid">
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_aller_plus_loin_avec_wordpress.pdf" target="_blank">Aller plus loin avec Wordpress</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_animations_css.pdf" target="_blank">Créez des animations CSS modernes</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_apprenez_a_programmer_avec_js.pdf" target="_blank">Apprenez à programmer avec JavaScript</a></p>
-        </div>        
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_concevez_un_contenu_web_accessible.pdf" target="_blank">Concevez un contenu web accessible</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_corrigez_vos-bugs.pdf" target="_blank">Corrigez vos bugs et trouvez une solution à vos problèmes de code</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_deboguez_votre_site.pdf" target="_blank">Déboguez l’interface de votre site internet</a></p>
-        </div>        
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_engagez_vous_dans_la_formation.pdf" target="_blank">Engagez-vous dans votre formation OpenClassrooms</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_environnement_front_end" target="_blank">Mettez en place votre environnement front-end</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_git&github.pdf" target="_blank">Gérez du code avec Git et GitHub</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_green_IT" target="_blank">Appliquez les principes du Green IT dans votre entreprise</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_html5&css3.pdf" target="_blank">Créez votre site web avec HTML5 et CSS3</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_integrez_une_maquette_figma.pdf" target="_blank">Intégrez une maquette Figma en HTML / CSS</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_ligne_de_commande_dans_un_terminal.pdf" target="_blank">Apprenez à utiliser la ligne de commande dans un terminal</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_maquette_figma.pdf" target="_blank">Créez une maquette web avec Figma</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_methodologie_cascade.pdf" target="_blank">Gérez un projet digital avec une méthodologie en cascade</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_optimisez_referencement_ceo.pdf" target="_blank">Optimisez le référencement de votre site (SEO) en améliorant ses performances</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_pages_web_dynamiques_js.pdf" target="_blank">Créez des pages web dynamiques avec JavaScript</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_perfectionner_vous_sur_worpress.pdf" target="_blank">Perfectionnez-vous sur WordPress</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_php&mysql.pdf" target="_blank">Concevez votre site web avec PHP et MySQL</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_projet_agile.pdf" target="_blank">Initiez-vous à la gestion de projet agile</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_referencementCEO.pdf" target="_blank">Augmentez votre trafic grâce au référencement naturel (SEO)</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_simplifiez_vous_le_css_avec_sass.pdf" target="_blank">Simplifiez-vous le CSS avec Sass</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_veille_informationnelle.pdf" target="_blank">Mettez en place un système de veille informationnelle</a></p>
-        </div>
-        <div class="certificat__item default">
-            <p><a href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_wordpress5.pdf" target="_blank">Créez un site moderne et professionnel avec WordPress 5</a></p>
-        </div>      
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_aller_plus_loin_avec_wordpress.pdf" target="_blank">
+            <p>Aller plus loin avec Wordpress</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_animations_css.pdf" target="_blank">
+            <p>Créez des animations CSS modernes</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_apprenez_a_programmer_avec_js.pdf" target="_blank">
+            <p>Apprenez à programmer avec JavaScript</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_concevez_un_contenu_web_accessible.pdf" target="_blank">
+            <p>Concevez un contenu web accessible</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_corrigez_vos-bugs.pdf" target="_blank">
+            <p>Corrigez vos bugs et trouvez une solution à vos problèmes de code</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_deboguez_votre_site.pdf" target="_blank">
+            <p>Déboguez l’interface de votre site internet</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_engagez_vous_dans_la_formation.pdf" target="_blank">
+            <p>Engagez-vous dans votre formation OpenClassrooms</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_environnement_front_end" target="_blank">
+            <p>Mettez en place votre environnement front-end</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_git&github.pdf" target="_blank">
+            <p>Gérez du code avec Git et GitHub</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_green_IT" target="_blank">
+            <p>Appliquez les principes du Green IT dans votre entreprise</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_html5&css3.pdf" target="_blank">
+            <p>Créez votre site web avec HTML5 et CSS3</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_integrez_une_maquette_figma.pdf" target="_blank">
+            <p>Intégrez une maquette Figma en HTML / CSS</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_ligne_de_commande_dans_un_terminal.pdf" target="_blank">
+            <p>Apprenez à utiliser la ligne de commande dans un terminal</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_maquette_figma.pdf" target="_blank">
+            <p>Créez une maquette web avec Figma</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_methodologie_cascade.pdf" target="_blank">
+            <p>Gérez un projet digital avec une méthodologie en cascade</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_optimisez_referencement_ceo.pdf" target="_blank">
+            <p>Optimisez le référencement de votre site (SEO) en améliorant ses performances</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_pages_web_dynamiques_js.pdf" target="_blank">
+            <p>Créez des pages web dynamiques avec JavaScript</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_perfectionner_vous_sur_worpress.pdf" target="_blank">
+            <p>Perfectionnez-vous sur WordPress</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_php&mysql.pdf" target="_blank">
+            <p>Concevez votre site web avec PHP et MySQL</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_projet_agile.pdf" target="_blank">
+            <p>Initiez-vous à la gestion de projet agile</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_referencementCEO.pdf" target="_blank">
+            <p>Augmentez votre trafic grâce au référencement naturel (SEO)</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_simplifiez_vous_le_css_avec_sass.pdf" target="_blank">
+            <p>Simplifiez-vous le CSS avec Sass</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_veille_informationnelle.pdf" target="_blank">
+            <p>Mettez en place un système de veille informationnelle</p>
+        </a>
+        <a class="certificat__item default" href="<?php echo get_template_directory_uri(); ?>/assets/docs/certificat_wordpress5.pdf" target="_blank">
+            <p>Créez un site moderne et professionnel avec WordPress 5</p>
+        </a>      
     </div>
     <button id="loadMore" class="cta-button">Charger plus</button>
 </section>

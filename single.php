@@ -5,48 +5,62 @@
         <h2 class="detail_title">Détail d'un Projet</h2>
         <div class="single_projet_container">
             <?php while (have_posts()) : the_post(); ?>
-                <div class="container_center">
-                    <?php 
-                    // Récupérer l'ID de l'image depuis les métadonnées du post
-                    $image_id = get_post_meta(get_the_ID(), 'image', true);
-                    $image_url = wp_get_attachment_image_url($image_id, 'desktop-home');
-                    if ($image_id) {
-                        echo '<img src="' . esc_url($image_url) . '" class="photo-image">';
-                    }
-                    ?>
-                </div>
-                <hr class="separation-line">
-                <div class="container_info">
-                    <h1><?php the_title(); ?></h1>
-                    <div class='single_description_date'>
-                        <p><?php the_date(); ?></p> <!-- Afficher la date de publication -->
+                <!-- Card pour détail d'un projet -->
+                <div class="card main-details-card">
+                    <div class="container_center">
+                        <?php 
+                        // Récupérer l'ID de l'image depuis les métadonnées du post
+                        $image_id = get_post_meta(get_the_ID(), 'image', true);
+                        $image_url = wp_get_attachment_image_url($image_id, 'desktop-home');
+                        if ($image_id) {
+                            echo '<img src="' . esc_url($image_url) . '" class="photo-image">';
+                        }
+                        ?>
                     </div>
-                    <div class="projet_description">
+                    <hr class="separation-line">
+                    <div class="container_info">
+                        <h1><?php the_title(); ?></h1>
+                        <!-- Afficher la date de publication -->
+                        <div class='single_description_date'>
+                            <p><?php the_date(); ?></p> 
+                        </div>
+                        <div class="projet_description">
                         <div class="single_categorie_photo">
                             <h2>Langages : </h2>
-                            <?php the_terms(get_the_ID(), 'categorie-photo'); ?>
-                        </div>
-                        <div class="single_description_github link">
-                            <h2>Lien vers le repo de Github :</h2>
                             <?php
-                            $github_link = get_field('github_link');
-                            if ($github_link) {
-                                echo '<a href="' . esc_url($github_link) . '" target="_blank">' . esc_html($github_link) . '</a>';
-                            } else {
-                                echo '<p>Aucun lien GitHub disponible</p>';
+                            // Afficher les catégories de langages
+                            $terms = get_the_terms(get_the_ID(), 'categorie-photo');
+                            if ($terms && !is_wp_error($terms)) {
+                                foreach ($terms as $term) {
+                                    echo '<span>' . esc_html($term->name) . '</span> ';
+                                }
                             }
                             ?>
                         </div>
-                        <div class="single_description_objectif">
-                            <h2>Objectif : </h2>
-                            <?php the_field('objectif'); ?>
-                        </div>
-                        <div class="single_description_tache">
-                            <h2>Tâche à réaliser :</h2>
-                            <?php the_field('tache_a_realiser'); ?>
+                            <div class="single_description_github link">
+                                <h2>Lien vers le repo de Github :</h2>
+                                <?php
+                                // Afficher le lien GitHub
+                                $github_link = get_field('github_link');
+                                if ($github_link) {
+                                    echo '<a href="' . esc_url($github_link) . '" target="_blank">' . esc_html($github_link) . '</a>';
+                                } else {
+                                    echo '<p>Aucun lien GitHub disponible</p>';
+                                }
+                                ?>
+                            </div>
+                            <div class="single_description_objectif"> 
+                                <h2>Objectif : </h2>
+                                <?php the_field('objectif'); ?>
+                            </div>
+                            <div class="single_description_tache">
+                                <h2>Tâche à réaliser :</h2>
+                                <?php the_field('tache_a_realiser'); ?>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- Fin de la card détail d'un projet -->
 
                 <!-- New Cards Section -->
                 <div class="new-cards-section">

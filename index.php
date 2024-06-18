@@ -26,7 +26,7 @@
         <h1 class="projet_accueil">Mes Projets</h1>
         <div class="projects-grid">
             <?php
-            // Query to fetch two latest projects
+            // Query pour récupérer les 2 derniers projets
             $args = array(
                 'post_type' => 'photo',
                 'posts_per_page' => 2
@@ -47,12 +47,14 @@
                         <hr class="separation-line">
                         <h2><?php the_title(); ?></h2>
                         <div class='single_description_date'>
+                            <!-- Afficher la date de publication -->
                             <p><?php echo get_the_date(); ?></p>
                         </div>
                         <div class="projet_description">
                             <div class="single_categorie_photo">
                                 <h3>Langages : </h3>
                                 <?php
+                                // Afficher les catégories de langages
                                 $terms = get_the_terms(get_the_ID(), 'categorie-photo');
                                 if ($terms && !is_wp_error($terms)) {
                                     foreach ($terms as $term) {
@@ -61,16 +63,10 @@
                                 }
                                 ?>
                             </div>
-                            <div class="single_description_github link">
-                            <h2>Lien vers le repo de Github :</h2>
-                            <?php
-                            $github_link = get_field('github_link');
-                            if ($github_link) {
-                                echo '<a href="' . esc_url($github_link) . '" target="_blank">' . esc_html($github_link) . '</a>';
-                            } else {
-                                echo '<p>Aucun lien GitHub disponible</p>';
-                            }
-                            ?>
+                            <div class="single_description_objectif">
+                            <h2>Objectif : </h2>
+                             <!-- Récupérer le contenu de l'objectif -->
+                            <?php the_field('objectif'); ?>
                         </div>
                         </div>
                     </div>
@@ -79,6 +75,7 @@
             endif; ?>
         </div>
         <div class="projects-cta">
+             <!-- Lien vers la page des projets -->
             <a href="<?php echo get_permalink(get_page_by_path('projets')); ?>" class="cta-button">Voir tous les projets</a>
         </div>
     </div>

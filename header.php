@@ -43,7 +43,7 @@
                     <i class='bx bx-sun sun'></i>
                 </div>
 
-                <div class="searchBox">
+                <!-- <div class="searchBox">
                    <div class="searchToggle">
                     <i class='bx bx-x cancel'></i>
                     <i class='bx bx-search search'></i>
@@ -54,7 +54,7 @@
                             <input type="search" name="s" placeholder="Search..." value="<?php echo get_search_query(); ?>">
                         </form>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </nav>
